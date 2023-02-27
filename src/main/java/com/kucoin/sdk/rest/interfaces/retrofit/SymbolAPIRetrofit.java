@@ -19,7 +19,7 @@ import java.util.List;
  */
 public interface SymbolAPIRetrofit {
 
-    @GET("api/v1/symbols")
+    @GET("api/v2/symbols")
     Call<KucoinResponse<List<SymbolResponse>>> getSymbols();
 
     @GET("api/v1/market/orderbook/level1")
