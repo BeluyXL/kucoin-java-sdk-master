@@ -43,7 +43,6 @@ public interface DepositAPI {
      * @param pageSize
      * @return A page of deposits.
      */
-    Pagination<DepositResponse> getDepositPageList(String currency, long startAt, long endAt,
-                                                   String status, int currentPage, int pageSize) throws IOException;
+    Pagination<DepositResponse> getDepositPageList(String currency) throws IOException;
 
 }

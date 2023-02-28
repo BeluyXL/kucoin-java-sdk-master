@@ -40,8 +40,7 @@ public class DepositAPIAdapter extends AuthRetrofitAPIImpl<DepositAPIRetrofit> i
     }
 
     @Override
-    public Pagination<DepositResponse> getDepositPageList(String currency, long startAt, long endAt, String status,
-                                                          int currentPage, int pageSize) throws IOException {
-        return super.executeSync(getAPIImpl().getDepositPageList(currentPage, pageSize, currency, status, startAt, endAt));
+    public Pagination<DepositResponse> getDepositPageList(String currency) throws IOException {
+        return super.executeSync(getAPIImpl().getDepositPageList(currency));
     }
 }
