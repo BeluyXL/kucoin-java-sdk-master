@@ -27,5 +27,6 @@ public interface DepositAPIRetrofit {
                                                                    @Query(("chain")) String chain);
 
     @GET("api/v1/deposits")
-    Call<KucoinResponse<Pagination<DepositResponse>>> getDepositPageList(@Query("currency") String currency);
+    Call<KucoinResponse<Pagination<DepositResponse>>> getDepositPageList(@Query("currency") String currency,
+                                                                         @Query("startAt") long startAt);
 }

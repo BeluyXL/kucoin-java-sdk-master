@@ -266,7 +266,7 @@ public class KucoinRestClientTest {
 
         exception.expect(KucoinApiException.class);
         exception.expectMessage("Sandbox environment cannot get deposit address");
-        sandboxKucoinRestClient.depositAPI().getDepositPageList("KCS");
+        sandboxKucoinRestClient.depositAPI().getDepositPageList("KCS", 10000000);
     }
 
     @Test
