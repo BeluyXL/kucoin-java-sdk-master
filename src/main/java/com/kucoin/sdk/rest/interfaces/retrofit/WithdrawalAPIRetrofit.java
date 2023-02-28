@@ -33,10 +33,8 @@ public interface WithdrawalAPIRetrofit {
     Call<KucoinResponse<Void>> cancelWithdraw(@Path("withdrawalId") String withdrawalId);
 
     @GET("api/v1/withdrawals")
-    Call<KucoinResponse<Pagination<WithdrawResponse>>> getWithdrawPageList(@Query("currentPage") int currentPage,
-                                                                           @Query("pageSize") int pageSize,
+    Call<KucoinResponse<Pagination<WithdrawResponse>>> getWithdrawPageList(
                                                                            @Query("currency") String currency,
-                                                                           @Query("status") String status,
-                                                                           @Query("startAt") Long startAt,
-                                                                           @Query("endAt") Long endAt);
+                                                                           @Query("startAt") Long startAt
+                                                                          );
 }

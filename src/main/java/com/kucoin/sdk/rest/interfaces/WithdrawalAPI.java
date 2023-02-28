@@ -50,7 +50,6 @@ public interface WithdrawalAPI {
      * @param pageSize
      * @return A page of withdrawals.
      */
-    Pagination<WithdrawResponse> getWithdrawList(String currency, String status, long startAt,
-                                                 long endAt, int currentPage, int pageSize) throws IOException;
+    Pagination<WithdrawResponse> getWithdrawList(String currency, long startAt) throws IOException;
 
 }

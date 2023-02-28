@@ -239,8 +239,7 @@ public class KucoinRestClientTest {
 
     @Test
     public void withdrawalAPI() throws Exception {
-        Pagination<WithdrawResponse> withdrawList = sandboxKucoinRestClient.withdrawalAPI().getWithdrawList("KCS", "FAILURE",
-                startAt, endAt, 1, 10);
+        Pagination<WithdrawResponse> withdrawList = sandboxKucoinRestClient.withdrawalAPI().getWithdrawList("KCS", startAt);
         assertThat(withdrawList, notNullValue());
 
         WithdrawQuotaResponse kcs = sandboxKucoinRestClient.withdrawalAPI().getWithdrawQuotas("KCS", null);
